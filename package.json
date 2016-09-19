@@ -14,5 +14,9 @@
     "nconf": "^0.8.4",
     "node-uuid": "^1.4.7",
     "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   }
 }
