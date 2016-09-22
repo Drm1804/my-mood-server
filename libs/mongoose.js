@@ -18,13 +18,29 @@ var Schema = mongoose.Schema;
 
 // Mood
 
-var Mood = new Schema({
+var MoodSchema = new Schema({
     name: { type: String, required: true },
     score: { type: String, required: true }
 });
 
+// User
+
+const UserSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        unique: true,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
+});
 
 
-var MoodModel = mongoose.model('Mood', Mood);
+
+var UserModel = mongoose.model('User', UserSchema);
+var MoodModel = mongoose.model('Mood', MoodSchema);
 
 module.exports.MoodModel = MoodModel;
+module.exports.UserModel = UserModel;
